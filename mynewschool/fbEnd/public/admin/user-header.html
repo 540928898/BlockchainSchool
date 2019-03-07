@@ -1,0 +1,234 @@
+
+			<style type="text/css">
+				.underline{
+					text-decoration: underline;
+				}
+			</style>
+        <div class="container block1"><p>W</p></div>
+			<div class="container"><h4>你好！<i class="glyphicon glyphicon-user"></i>管理员<b><span id="aname"></span></b></h4></div>
+			<ul class="pager" id="pagelist">
+			  <li><a class="underline" id="addlearner" onclick="swith(this);">添加新学员</a></li>
+			  <li><a id="viewlearner" onclick="swith(this);">查看学员</a></li>
+			  <li><a id="myinfo" onclick="swith(this);">管理员中心</a></li>
+        <li><a id="explorer" onclick="swith(this);">区块链信息</a></li>
+			  </ul>
+       <script type="text/javascript">
+       function getCookie(objName){//获取指定名称的cookie的值   
+         var arrStr = document.cookie.split("; ");   
+         for (var i = 0; i < arrStr.length; i++) {   
+             var temp = arrStr[i].split("=");   
+             if (temp[0] == objName)   
+                 return unescape(temp[1]);   
+         }   
+       }   
+       var aname = getCookie("aname"); 
+       $("#aname").html(aname);
+       function swith(obj){
+       	$("#addlearner").removeClass("underline");
+       	$("#viewlearner").removeClass("underline");
+       	$("#myinfo").removeClass("underline");
+       	$("#"+obj.id).addClass("underline");
+       	if(obj.id == "addlearner"){
+       		$("#adminCenter").hide();
+       		$("#viewlearnerBlock").hide();
+          $("#blockchainExplorer").hide();
+       		$("#addlearnerBlock").show();  
+
+
+
+
+
+       	}else if(obj.id == "viewlearner"){
+       		$("#addlearnerBlock").hide();
+       		$("#adminCenter").hide();
+          $("#blockchainExplorer").hide();
+       		$("#viewlearnerBlock").show();
+               if($("#viewlearnerBlock").html() == ""){
+                 $.ajax({
+                 type: 'GET',
+                 url: '/check/learner/query',
+                 dataType: 'json',
+                 success: function(data){
+                   console.log(JSON.stringify(data));
+                     for(var i in data){  
+                       $('<br>期数：<span id="term'+i+'">'+ data[i].term+'</span><br>学员编号:<span id="_id'+i+'">'+data[i].bianhao+'</span><br>'
+                       +'</span><br>证书编号:<span id="certificateNum'+i+'">'+data[i].certificateNum+'</span><br>'
+			+'姓名：<span id="disease1'+i+'">'+data[i].name+'</span><br>手机号码：<span id="phone'+i+'">'+data[i].phone+'</span><br>邮箱：<span id="mailbox'+i+'">'+data[i].mailbox+'</span><br>所在机构：<span>'+data[i].institution+'</span></br>职业/职位：<span>'+data[i].position+'</span><br>'
++'授权码：<span>'+data[i].verifyCode+'</span><br>'
++'区块链标记码：<span>'+data[i].txid+'</span><br>'
+			+'<a class="btn btn-info btn-xs" onclick="showPwd('+data[i].phone+');">查看密码</a> <a class="btn btn-danger btn-xs" onclick="delete_register('+data[i].phone+');">删除注册信息</a> <a class="btn btn-warning btn-xs" onclick=deleteLearner('+data[i].certificateNum+')>清除学员信息</a><br></hr>').appendTo("#viewlearnerBlock");
+                     }
+                     function getJsonLength(jsonData){
+                       var jsonLength = 0;
+                       for(var item in jsonData){
+                         jsonLength++;
+                       }
+                       return jsonLength;
+                     }
+                     var jsonLength=getJsonLength(data);
+                     if($("#viewlearnerBlock").html() == ""){
+                       $("#viewlearnerBlock").html("viewlearnerBlock");
+                     }
+                  }
+                  }).error(function(err){
+                     console.log(err);
+                     alert(err.responseText);
+                  }); 
+                }
+            		
+
+
+
+       	}else if(obj.id == "myinfo"){
+       		$("#addlearnerBlock").hide();
+       		$("#viewlearnerBlock").hide(); 
+          $("#blockchainExplorer").hide();
+       		$("#adminCenter").show();  
+                     if($("#myinfoBlock").html() == ""){
+                       postBody={
+                          phone: getCookie('aphone'),
+                          username: getCookie('aphone'),
+                          password: getCookie("apassword")
+                       }
+                       $.ajax({
+                       type: 'POST',
+                       url: '/users/login',
+                       data: postBody,
+                       dataType: 'json',
+                       success: function(data){
+                         console.log(JSON.stringify(data));
+                             $('<span><b>我的信息</b></span>'+'<br>管理员编号:<span id="_ida">'+data.data[0].bianhao+'</span><br>管理员姓名：<span id="disease1">'+data.data[0].name+'</span><br>管理员手机号码：<span id="phone">'+data.data[0].phone+'</span></hr>').appendTo("#myinfoBlock");
+                         function getJsonLength(jsonData){
+                           var jsonLength = 0;
+                           for(var item in jsonData){
+                             jsonLength++;
+                           }
+                           return jsonLength;
+                         }
+                         var jsonLength=getJsonLength(data);
+                         if($("#myinfoBlock").html() == ""){
+                           $("#myinfoBlock").html("null");
+                         }
+                       }
+                       }).error(function(err){
+                           console.log(err);
+                           alert(err.responseText);
+                       }); 
+
+                       $.ajax({
+                       type: 'GET',
+                       url: '/check/admin/find',
+                       data: postBody,
+                       dataType: 'json',
+                       success: function(data){
+                           for(var i in data){  
+                             $('<br>管理员编号:<span id="_id'+i+'">'+data[i].bianhao+'</span><br>管理员姓名：<span id="disease1'+i+'">'+data[i].name+'</span><br>手机号码：<span id="phone'+i+'">'+data[i].phone+'</span><br>'
++'<a class="btn btn-info btn-xs" onclick="showPwd('+data[i].phone+');">查看密码</a>  <a class="btn btn-warning btn-xs" onclick=deleteLearner('+data[i].phone+')>删除管理员</a><br></hr>').appendTo("#adtips");
+                           }
+
+
+                         function getJsonLength(jsonData){
+                           var jsonLength = 0;
+                           for(var item in jsonData){
+                             jsonLength++;
+                           }
+                           return jsonLength;
+                         }
+                         var jsonLength=getJsonLength(data);
+                         if($("#adtips").html() == ""){
+                           $("#adtips").html("null");
+                         }
+                       }
+                       }).error(function(err){
+                           console.log(err);
+                           alert(err.responseText);
+                       }); 
+
+                     }
+       	}else if(obj.id == "explorer"){
+          $("#addlearnerBlock").hide();
+          $("#viewlearnerBlock").hide(); 
+          $("#adminCenter").hide();
+          $("#blockchainExplorer").show();  
+
+        }
+       }
+
+function showPwd(nihao){
+       postBody={
+        phone: nihao
+     }
+     $.ajax({
+     type: 'POST',
+     url: '/users/getpwd',
+     data: postBody,
+     dataType: 'json',
+     success: function(data){
+          alert("password:"+data.password);
+        }
+     }).error(function(err){
+         console.log(err);
+         alert(err.responseText);
+     }); 
+}
+function delete_register(phone){
+    postBody ={
+        phone: phone
+    }  
+    $.ajax({
+        type: 'POST',
+        url: '/test/delete',
+        data: postBody,
+        dataType: 'json',
+        success: function(data){
+            if(data.result2.n == 0){
+                alert("没有需要删除的注册信息");
+            }
+            else if(data.result2.n == 1){
+                alert("删除注册信息成功");
+            }
+            else{
+                alert("服务器错误");
+            }
+          }
+        }).error(function(err){
+            console.log(err);
+            alert("服务器错误！")
+        });
+}
+function deleteLearner(certificateNum){
+    postBody ={
+      certificateNum:certificateNum
+    }
+    $.ajax({
+        type: 'POST',
+        url: '/test/delete/learner',
+        data: postBody,
+        dataType: 'json',
+        success: function(data){
+		alert(JSON.stringify(data));
+          }
+        }).error(function(err){
+            console.log(err);
+            alert("服务器错误！")
+        });
+}
+function deleteAdmin(phone){
+    postBody ={
+      phone:phone
+    }
+    $.ajax({
+        type: 'POST',
+        url: '/test/delete/admin',
+        data: postBody,
+        dataType: 'json',
+        success: function(data){
+		alert(JSON.stringify(data));
+          }
+        }).error(function(err){
+            console.log(err);
+            alert("服务器错误！")
+        });
+}
+       </script>
+

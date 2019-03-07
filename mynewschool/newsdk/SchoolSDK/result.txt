@@ -1,0 +1,100 @@
+//==================================================================
+//SDK提供的操作主要的操作有两种，分别为invoke(产生交易，改变账本的world state)
+//和query(不产生交易，不改变账本的world state，只查询world state)
+//invoke返回交易信息状态和交易hash，query返回key对应的值（区块链上数据存储方式为key-value对）
+//合约(链码，chaincode)一共有4个：
+//   register:提供与用户注册、修改用户相关信息的功能
+//   publicService:与发布服务、申请服务相关（同时去调register合约）
+//   comment:与评论服务相关（同时去调register与publicSrvice合约）
+//   consume:与消费积分有关（同时去调register和publicService合约）
+//主线：众创空间/孵化器a1001发布一个工位b1001->公司/个人申请服务、评价服务->积分增加->积分消费
+//用户角色两种：1 表示孵化器、众创空间；2 表示需要工位的公司或个人
+//服务类型三种：1 工位；2 其他服务 3 可积分兑换的服务
+//==================================================================
+注册用户a1001 ////////////////////////////////
+args传入的6个参数分别为：用户ID | 用户密码 | 用户角色（1代表孵化器、众创空间，可发布工位与服务；2代表需要工位的公司或个人）| 账户余额（float64型字符串） | 信用积分（整型字符串）| 功能积分（整型字符串）| 
+注册用户a1001返回结果为操作状态和交易ID
+{"success":true,"message":"1280b7bd422011d6b94c11bc02a2c6900c800f28cd621352d2c228dd09d2b5dd"}
+
+查询用户a1001 ////////////////////////////////
+args传入的1个参数为：用户ID |
+返回结果为查询结果为用户a1001的注册信息
+{"success":true,"message":{"id":"a1001","password":"123456","role":"1","balance":1000,"crePoint":1000,"funcPoint":1000}}
+
+注册用户a1002 ////////////////////////////////
+传入的6个参数的含义与注册a1001相同，其中第三个参数为2，表示公司或个人
+注册用户a1002返回结果为操作状态和交易ID
+{"success":true,"message":"4b5e1afa5d9ccb60a50dfa7aea683b998fac29169282b14fb420c69f74023000"}
+
+查询用户a1002 ////////////////////////////////
+args传入的1个参数为：用户ID |
+返回结果为查询结果为用户a1002的注册信息
+{"success":true,"message":{"id":"a1002","password":"123456","role":"2","balance":1000,"crePoint":1000,"funcPoint":1000}}
+
+用户a1001发布服务b1001(owner is a1001) ////////////////////////////////
+args传入的6个参数为：服务/工位ID | 发布者ID | 类型（1为工位，2为其他服务） | 类型2（服务名称） | 价格（float64） |描述字段 
+{"success":true,"message":"6dcbce2b7e40f04667906d89ed49f3abf5116e8bfef8f219afe582faef870372"}
+
+查询服务b1001 ////////////////////////////////
+args传入的1参数为：服务/工位ID 
+{"success":true,"message":{"id":"b1001","ownerId":"a1001","type":"1","name":"日租办公室","function":"","money":500,"funPoint":0,"description":"面积大，位置好，设备齐全。","state":"0","top":false,"topPoint":0,"userId":"","comment":null}}
+
+用户a1002申请服务b1001 ////////////////////////////////
+args传入的2个参数为：服务/工位ID | 申请者ID
+{"success":true,"message":"b35797e1409f6130a5cfcbddb545d57ab3eab69f51e75d4b234f4533f8027ea8"}
+
+查询服务b1001 ////////////////////////////////
+args传入的1个参数为：服务/工位ID
+{"success":true,"message":{"id":"b1001","ownerId":"a1001","type":"1","name":"日租办公室","function":"","money":500,"funPoint":0,"description":"面积大，位置好，设备齐全。","state":"1","top":false,"topPoint":0,"userId":"","comment":null}}
+
+用户a1002评价服务b001（属于a1001） 评论使得功能积分＋5//////////////
+args传入的4个参数为：使用者ID | 服务ID | 评级（整型1~5） | 评论
+{"success":true,"message":"c7642172dd3e6e5aa4909e5682c1c08990c4703133d1020e76a8602fcd43da90"}
+POST register:query a1001 查询user1 ////////////////////////////////
+Money change!
+args传入的1个参数为：用户ID
+{"success":true,"message":{"id":"a1001","password":"123456","role":"1","balance":1500,"crePoint":1005,"funcPoint":1005}}
+
+POST register:query a1002 查询user2 ////////////////////////////////
+Money change!
+args传入的1个参数为：用户ID
+{"success":true,"message":{"id":"a1002","password":"123456","role":"2","balance":500,"crePoint":1000,"funcPoint":1010}}
+
+POST publicService:query b1001 查询服务b1001 ////////////////////////////////
+State change!
+args传入的1个参数为：工位/服务ID
+{"success":true,"message":{"id":"b1001","ownerId":"a1001","type":"1","name":"日租办公室","function":"","money":500,"funPoint":0,"description":"面积大，位置好，设备齐全。","state":"0","top":false,"topPoint":0,"userId":"","comment":[{"cusHash":"a1002","gevel":5,"comment":"好评，值得推荐！"}]}}
+
+###############################################################################
+###########                   积分消费                     #####################
+###############################################################################
+用户a1001发布服务b1002(owner is a1001) ////////////////////////////////
+args传入的6个参数为：服务/工位ID | 发布者ID | 类型（1为工位，2为其他服务） | 类型2（服务名称） | 所需功能积分（int） |描述字段 
+{"success":true,"message":"6d3f86fb860be90823128e54b29aebdfcd20bb5b00c076ae5b6d716d25c117cb"}
+
+查询服务b1002 ////////////////////////////////
+args传入的1参数为：服务/工位ID 
+{"success":true,"message":{"id":"b1002","ownerId":"a1001","type":"1","name":"临时工位","function":"","money":0,"funPoint":20,"description":"面积大，位置好。","state":"0","top":false,"topPoint":0,"userId":"","comment":null}}
+
+使用功能积分使得服务b1002权限转换 ////////////////////////////////
+args传入的2参数为：服务/工位ID | 支付的功能积分 
+{"success":true,"message":"ffe1c84f7a294a13bf3ac597ee631e8152e30755ecb8677f880c1e7a44cb5691"}
+
+用户a1002申请服务b1002 ////////////////////////////////
+args传入的2个参数为：服务/工位ID | 申请者ID
+{"success":true,"message":"c9898b27084edd8fa2b9a21484ac9d9ee9716b5300830ff24c2f316a190c1563"}
+
+查询服务b1002 ////////////////////////////////
+args传入的1个参数为：服务/工位ID
+{"success":true,"message":{"id":"b1002","ownerId":"a1001","type":"1","name":"临时工位","function":"","money":0,"funPoint":20,"description":"面积大，位置好。","state":"1","top":true,"topPoint":10,"userId":"","comment":null}}
+
+查询用户a1001 ////////////////////////////////
+Money change!
+args传入的1个参数为：用户ID
+{"success":true,"message":{"id":"a1001","password":"123456","role":"1","balance":1500,"crePoint":1005,"funcPoint":1020}}
+
+查询用户a1002 ////////////////////////////////
+Money change!
+args传入的1个参数为：用户ID
+{"success":true,"message":{"id":"a1002","password":"123456","role":"2","balance":500,"crePoint":1000,"funcPoint":995}}
+

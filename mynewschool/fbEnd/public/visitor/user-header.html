@@ -1,0 +1,55 @@
+
+			<style type="text/css">
+				.underline{
+					text-decoration: underline;
+				}
+			</style>
+        <div class="container block1"><p>W</p></div>
+			<div class="container"><h4>你好！<i class="glyphicon glyphicon-user"></i>未知游客</h4></div>
+			<ul class="pager" id="pagelist">
+			  <li><a class="underline" id="addlearner" onclick="swith(this);">查看学员</a></li>
+                          <li><a id="explorer" onclick="swith(this);">区块链信息</a></li>
+			  </ul>
+       <script type="text/javascript">
+       function getCookie(objName){//获取指定名称的cookie的值   
+         var arrStr = document.cookie.split("; ");   
+         for (var i = 0; i < arrStr.length; i++) {   
+             var temp = arrStr[i].split("=");   
+             if (temp[0] == objName)   
+                 return unescape(temp[1]);   
+         }   
+       }   
+       function swith(obj){
+       	$("#addlearner").removeClass("underline");
+       	$("#explorer").removeClass("underline");
+       	$("#"+obj.id).addClass("underline");
+       	if(obj.id == "addlearner"){
+          $("#blockchainExplorer").hide();
+          $("#addlearnerBlock").show();  
+       	}else if(obj.id == "explorer"){
+          $("#addlearnerBlock").hide();
+          $("#blockchainExplorer").show();  
+
+        }
+       }
+
+function showPwd(nihao){
+       postBody={
+        phone: nihao
+     }
+     $.ajax({
+     type: 'POST',
+     url: '/users/getpwd',
+     data: postBody,
+     dataType: 'json',
+     success: function(data){
+          alert("password:"+data.password);
+        }
+     }).error(function(err){
+         console.log(err);
+         alert(err.responseText);
+     }); 
+}
+
+       </script>
+

@@ -1,0 +1,46 @@
+
+			<style type="text/css">
+				.underline{
+					text-decoration: underline;
+				}
+			</style>
+        <div class="container block1"><p>W</p></div>
+			<div class="container"><h4>你好！<i class="glyphicon glyphicon-user"></i>学员<b><span id="lname"></span></b></h4></div>
+			<ul class="pager">
+			  <li><a class="underline" id="myinfo" onclick="swith(this);">查看基本信息</a></li>
+			  <li><a id="mychaininfo" onclick="swith(this);">我的培训证书</a></li>
+			  <li><a id="wholechaininfo" onclick="swith(this);">区块链信息</a></li>
+			</ul>
+			<script type="text/javascript">
+				
+	            function getCookie(objName){//获取指定名称的cookie的值   
+	                var arrStr = document.cookie.split("; ");   
+	                for (var i = 0; i < arrStr.length; i++) {   
+	                    var temp = arrStr[i].split("=");   
+	                    if (temp[0] == objName)   
+	                        return unescape(temp[1]);   
+	                }   
+	            }   
+              	var lname = getCookie("lname"); 
+              	$("#lname").html(lname);              	
+              	function swith(obj){
+              		$("#myinfo").removeClass("underline");
+              		$("#mychaininfo").removeClass("underline");
+              		$("#wholechaininfo").removeClass("underline");
+              		$("#"+obj.id).addClass("underline");
+              		if(obj.id == "myinfo"){
+              			$("#mychaininfoBlock").hide();
+              			$("#wholechaininfoBlock").hide();
+              			$("#myinfoBlock").show();  
+              		}else if(obj.id == "mychaininfo"){
+              			$("#wholechaininfoBlock").hide();
+              			$("#myinfoBlock").hide();
+              			$("#mychaininfoBlock").show();              			
+              		}else{
+              			$("#myinfoBlock").hide();
+              			$("#mychaininfoBlock").hide(); 
+              			$("#wholechaininfoBlock").show();  
+              		}
+              	}
+			</script>
+

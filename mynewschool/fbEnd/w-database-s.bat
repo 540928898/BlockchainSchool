@@ -1,0 +1,1 @@
+mongod --dbpath=F:\fospring\server\trainChain\fbEnd\database

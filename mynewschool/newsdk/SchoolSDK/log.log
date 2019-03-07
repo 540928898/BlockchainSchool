@@ -1,0 +1,350 @@
+
+Stopping peer1.org2.example.com ... 
+Stopping peer1.org1.example.com ... 
+Stopping peer0.org1.example.com ... 
+Stopping peer0.org2.example.com ... 
+Stopping ca_peerOrg1 ... 
+Stopping orderer.example.com ... 
+Stopping ca_peerOrg2 ... 
+[4A[2KStopping peer0.org2.example.com ... [32mdone[0m[4B[6A[2KStopping peer1.org1.example.com ... [32mdone[0m[6B[7A[2KStopping peer1.org2.example.com ... [32mdone[0m[7B[5A[2KStopping peer0.org1.example.com ... [32mdone[0m[5B[2A[2KStopping orderer.example.com ... [32mdone[0m[2B[1A[2KStopping ca_peerOrg2 ... [32mdone[0m[1B[3A[2KStopping ca_peerOrg1 ... [32mdone[0m[3BRemoving peer1.org2.example.com ... 
+Removing peer1.org1.example.com ... 
+Removing peer0.org1.example.com ... 
+Removing peer0.org2.example.com ... 
+Removing ca_peerOrg1 ... 
+Removing orderer.example.com ... 
+Removing ca_peerOrg2 ... 
+[4A[2KRemoving peer0.org2.example.com ... [32mdone[0m[4B[1A[2KRemoving ca_peerOrg2 ... [32mdone[0m[1B[2A[2KRemoving orderer.example.com ... [32mdone[0m[2B[6A[2KRemoving peer1.org1.example.com ... [32mdone[0m[6B[3A[2KRemoving ca_peerOrg1 ... [32mdone[0m[3B[5A[2KRemoving peer0.org1.example.com ... [32mdone[0m[5B[7A[2KRemoving peer1.org2.example.com ... [32mdone[0m[7BRemoving network artifacts_default
+
+========== No containers available for deletion ==========
+
+
+========== No images available for deletion ===========
+
+Creating network "artifacts_default" with the default driver
+Creating ca_peerOrg2
+Creating orderer.example.com
+Creating ca_peerOrg1
+Creating peer0.org2.example.com
+Creating peer0.org1.example.com
+Creating peer1.org2.example.com
+Creating peer1.org1.example.com
+/home/test/Desktop/yiliao
+
+
+============== node modules installed already =============
+
+[36m[2018-03-30 09:55:16.906] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: constructor, keySize: 256
+[36m[2018-03-30 09:55:16.913] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256
+[36m[2018-03-30 09:55:17.048] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start
+[36m[2018-03-30 09:55:17.053] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js
+[36m[2018-03-30 09:55:17.076] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: constructor, keySize: 256
+[36m[2018-03-30 09:55:17.079] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256
+[36m[2018-03-30 09:55:17.080] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start
+[36m[2018-03-30 09:55:17.081] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js
+[32m[2018-03-30 09:55:17.143] [INFO] SampleWebApp - [39m****************** SERVER STARTED ************************
+[32m[2018-03-30 09:55:17.161] [INFO] SampleWebApp - [39m**************  http://localhost:4000  ******************
+[36m[2018-03-30 09:55:41.537] [DEBUG] SampleWebApp - [39mEnd point : /users
+[36m[2018-03-30 09:55:41.542] [DEBUG] SampleWebApp - [39mUser name : Jim
+[36m[2018-03-30 09:55:41.542] [DEBUG] SampleWebApp - [39mOrg name  : org1
+[36m[2018-03-30 09:55:41.544] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore.js - constructor
+[36m[2018-03-30 09:55:41.555] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- getValue
+[36m[2018-03-30 09:55:41.560] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore.js - constructor
+[36m[2018-03-30 09:55:41.561] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- getValue
+[36m[2018-03-30 09:55:41.787] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/tmp/fabric-client-kvs_peerOrg1"}}
+[36m[2018-03-30 09:55:41.788] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore.js - constructor
+[36m[2018-03-30 09:55:41.790] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: _getKeyStore returning ks
+[36m[2018-03-30 09:55:41.791] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: generateKey, store.setValue
+[36m[2018-03-30 09:55:41.792] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 59ebe3a5f32f7d11d0588e947cb772aa0882e962c133694704ca297024ef67dc
+[36m[2018-03-30 09:55:41.795] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 8777339b4f8075425a6388842b4864a6550a5d35601ad9e963ed3fa39a5a7820
+[36m[2018-03-30 09:55:41.804] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[32m[2018-03-30 09:55:42.285] [INFO] Helper - [39mSuccessfully enrolled user 'admin'
+[36m[2018-03-30 09:55:42.288] [DEBUG] Helper - [39mMsp ID : Org1MSP
+[36m[2018-03-30 09:55:42.289] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - start
+[36m[2018-03-30 09:55:42.291] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - have the key [Circular]
+[36m[2018-03-30 09:55:42.294] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: _getKeyStore resolving store
+[36m[2018-03-30 09:55:42.295] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 59ebe3a5f32f7d11d0588e947cb772aa0882e962c133694704ca297024ef67dc
+[36m[2018-03-30 09:55:42.296] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 8777339b4f8075425a6388842b4864a6550a5d35601ad9e963ed3fa39a5a7820
+[36m[2018-03-30 09:55:42.297] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[36m[2018-03-30 09:55:42.301] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 59ebe3a5f32f7d11d0588e947cb772aa0882e962c133694704ca297024ef67dc
+[36m[2018-03-30 09:55:42.303] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 8777339b4f8075425a6388842b4864a6550a5d35601ad9e963ed3fa39a5a7820
+[36m[2018-03-30 09:55:42.305] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 59ebe3a5f32f7d11d0588e947cb772aa0882e962c133694704ca297024ef67dc
+[36m[2018-03-30 09:55:42.305] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 8777339b4f8075425a6388842b4864a6550a5d35601ad9e963ed3fa39a5a7820
+[36m[2018-03-30 09:55:42.306] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 59ebe3a5f32f7d11d0588e947cb772aa0882e962c133694704ca297024ef67dc
+[36m[2018-03-30 09:55:42.307] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 8777339b4f8075425a6388842b4864a6550a5d35601ad9e963ed3fa39a5a7820
+[36m[2018-03-30 09:55:42.309] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[36m[2018-03-30 09:55:42.321] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: 3e469169975abdb98a432bf043c856df30c9a71ef449674a2465ba8adfcbb7d1>,
+  s: <BN: 62f48ac72431a11fd7e7362d7cf8679cc557e56fc3e1444c9aa8abffb3ff393>,
+  recoveryParam: 0 }
+[36m[2018-03-30 09:55:42.513] [DEBUG] Helper - [39mJim registered successfully
+[36m[2018-03-30 09:55:42.672] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: _getKeyStore resolving store
+[36m[2018-03-30 09:55:42.679] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: generateKey, store.setValue
+[36m[2018-03-30 09:55:42.679] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 71c6ed3d72f61714a8b13658094f3fc4b2c26449a48a0f669dbed6972af8b9ae
+[36m[2018-03-30 09:55:42.680] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 99eacfc1286bf127b6a27e66b900bc5091f72d47985b2a66e5c4d4e370ec162e
+[36m[2018-03-30 09:55:42.683] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[36m[2018-03-30 09:55:43.061] [DEBUG] Helper - [39mJim enrolled successfully
+[36m[2018-03-30 09:55:43.061] [DEBUG] Helper - [39mMsp ID : Org1MSP
+[36m[2018-03-30 09:55:43.061] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: constructor, keySize: 256
+[36m[2018-03-30 09:55:43.061] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256
+[36m[2018-03-30 09:55:43.061] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start
+[36m[2018-03-30 09:55:43.061] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js
+[36m[2018-03-30 09:55:43.061] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - start
+[36m[2018-03-30 09:55:43.067] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - have the key [Circular]
+[36m[2018-03-30 09:55:43.068] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/root/.hfc-key-store"}}
+[36m[2018-03-30 09:55:43.068] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore.js - constructor
+[36m[2018-03-30 09:55:43.076] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: _getKeyStore returning ks
+[36m[2018-03-30 09:55:43.076] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 71c6ed3d72f61714a8b13658094f3fc4b2c26449a48a0f669dbed6972af8b9ae
+[36m[2018-03-30 09:55:43.076] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 99eacfc1286bf127b6a27e66b900bc5091f72d47985b2a66e5c4d4e370ec162e
+[36m[2018-03-30 09:55:43.076] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[36m[2018-03-30 09:55:43.082] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 71c6ed3d72f61714a8b13658094f3fc4b2c26449a48a0f669dbed6972af8b9ae
+[36m[2018-03-30 09:55:43.082] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 99eacfc1286bf127b6a27e66b900bc5091f72d47985b2a66e5c4d4e370ec162e
+[36m[2018-03-30 09:55:43.082] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 71c6ed3d72f61714a8b13658094f3fc4b2c26449a48a0f669dbed6972af8b9ae
+[36m[2018-03-30 09:55:43.086] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 99eacfc1286bf127b6a27e66b900bc5091f72d47985b2a66e5c4d4e370ec162e
+[36m[2018-03-30 09:55:43.091] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 71c6ed3d72f61714a8b13658094f3fc4b2c26449a48a0f669dbed6972af8b9ae
+[36m[2018-03-30 09:55:43.091] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 99eacfc1286bf127b6a27e66b900bc5091f72d47985b2a66e5c4d4e370ec162e
+[36m[2018-03-30 09:55:43.093] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[32m[2018-03-30 09:55:43.145] [INFO] SampleWebApp - [39m<<<<<<<<<<<<<<<<< C R E A T E  C H A N N E L >>>>>>>>>>>>>>>>>
+[36m[2018-03-30 09:55:43.147] [DEBUG] SampleWebApp - [39mEnd point : /channels
+[36m[2018-03-30 09:55:43.147] [DEBUG] SampleWebApp - [39mChannel name : mychannel
+[36m[2018-03-30 09:55:43.149] [DEBUG] SampleWebApp - [39mchannelConfigPath : ../artifacts/channel/mychannel.tx
+[36m[2018-03-30 09:55:43.149] [DEBUG] Create-Channel - [39m
+====== Creating Channel 'mychannel' ======
+
+[36m[2018-03-30 09:55:43.173] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: constructor, keySize: 256
+[36m[2018-03-30 09:55:43.176] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256
+[36m[2018-03-30 09:55:43.178] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start
+[36m[2018-03-30 09:55:43.179] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js
+[36m[2018-03-30 09:55:43.179] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore.js - constructor
+[36m[2018-03-30 09:55:43.183] [DEBUG] Helper - [39mMsp ID : Org1MSP
+[36m[2018-03-30 09:55:43.185] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - start
+[36m[2018-03-30 09:55:43.191] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - have the key [Circular]
+[36m[2018-03-30 09:55:43.195] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/tmp/fabric-client-kvs_peerOrg1"}}
+[36m[2018-03-30 09:55:43.195] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore.js - constructor
+[36m[2018-03-30 09:55:43.198] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: _getKeyStore returning ks
+[36m[2018-03-30 09:55:43.198] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:43.198] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:43.199] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[36m[2018-03-30 09:55:43.202] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - start
+[36m[2018-03-30 09:55:43.203] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - have the key [Circular]
+[36m[2018-03-30 09:55:43.206] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: _getKeyStore resolving store
+[36m[2018-03-30 09:55:43.206] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:43.206] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:43.210] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[36m[2018-03-30 09:55:43.213] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:43.213] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:43.213] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:43.213] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:43.217] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:43.220] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:43.220] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[36m[2018-03-30 09:55:43.223] [DEBUG] Create-Channel - [39mSuccessfully acquired admin user for the organization "org1"
+[36m[2018-03-30 09:55:43.255] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: 1d1fdd0bcbf233676d9c257b11207c70b6860c453d0ea481f9671ca8ee7be14e>,
+  s: <BN: 34b009bfc9e5c755e240b0c27270abab44ad5bc26a9ebdf65e6e34bb6e196675>,
+  recoveryParam: 1 }
+[36m[2018-03-30 09:55:43.312] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: 54bbc7db9b1fc019a38c665741ef2bfdb2a820eb63d639a65e4edf3ba2dd40ee>,
+  s: <BN: dcd6e71a914684d3b52c77aa986fb40c12cf8d4e21b65215d6670d92fc4baae>,
+  recoveryParam: 0 }
+[36m[2018-03-30 09:55:43.502] [DEBUG] Create-Channel - [39m response ::{"status":"SUCCESS"}
+[36m[2018-03-30 09:55:43.506] [DEBUG] Create-Channel - [39mSuccessfully created the channel.
+[32m[2018-03-30 09:55:48.535] [INFO] SampleWebApp - [39m<<<<<<<<<<<<<<<<< J O I N  C H A N N E L >>>>>>>>>>>>>>>>>
+[36m[2018-03-30 09:55:48.552] [DEBUG] SampleWebApp - [39mchannelName : mychannel
+[36m[2018-03-30 09:55:48.558] [DEBUG] SampleWebApp - [39mpeers : localhost:7051,localhost:7056
+[32m[2018-03-30 09:55:48.558] [INFO] Join-Channel - [39mCalling peers in organization "org1" to join the channel
+[36m[2018-03-30 09:55:48.567] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: constructor, keySize: 256
+[36m[2018-03-30 09:55:48.567] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256
+[36m[2018-03-30 09:55:48.567] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start
+[36m[2018-03-30 09:55:48.568] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js
+[36m[2018-03-30 09:55:48.568] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore.js - constructor
+[36m[2018-03-30 09:55:48.568] [DEBUG] Helper - [39mMsp ID : Org1MSP
+[36m[2018-03-30 09:55:48.572] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - start
+[36m[2018-03-30 09:55:48.573] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - have the key [Circular]
+[36m[2018-03-30 09:55:48.573] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/tmp/fabric-client-kvs_peerOrg1"}}
+[36m[2018-03-30 09:55:48.573] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore.js - constructor
+[36m[2018-03-30 09:55:48.578] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: _getKeyStore returning ks
+[36m[2018-03-30 09:55:48.581] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:48.583] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:48.614] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[36m[2018-03-30 09:55:48.616] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - start
+[36m[2018-03-30 09:55:48.624] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - have the key [Circular]
+[36m[2018-03-30 09:55:48.626] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: _getKeyStore resolving store
+[36m[2018-03-30 09:55:48.627] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:48.639] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:48.641] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[36m[2018-03-30 09:55:48.646] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:48.660] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:48.662] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:48.666] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:48.675] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:48.677] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:48.678] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[32m[2018-03-30 09:55:48.683] [INFO] Join-Channel - [39mreceived member object for admin of the organization "org1": 
+[36m[2018-03-30 09:55:48.706] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: bc186c825bc1945d036f5d5cea25d5329c84516de71ea015c87954a7521ad901>,
+  s: <BN: 73bdc487e7fb01ab27156b176fc459c8a4a2e1e60a0ecf2de956cadfb882c325>,
+  recoveryParam: 0 }
+[32minfo[39m: [EventHub.js]: _connect - options {"grpc.ssl_target_name_override":"peer0.org1.example.com","grpc.default_authority":"peer0.org1.example.com"}
+[36m[2018-03-30 09:55:48.852] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: acc2a7a5a098e718ba30a5e006e6624a0c036a406265994489bd35747a106ce1>,
+  s: <BN: 5d5beaab276ad34e0437bfc7fdf9f3da0116aafc06c23f597784eb0e3aad1840>,
+  recoveryParam: 1 }
+[32minfo[39m: [EventHub.js]: _connect - options {"grpc.ssl_target_name_override":"peer1.org1.example.com","grpc.default_authority":"peer1.org1.example.com"}
+[36m[2018-03-30 09:55:48.910] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: acc2a7a5a098e718ba30a5e006e6624a0c036a406265994489bd35747a106ce1>,
+  s: <BN: 5d5beaab276ad34e0437bfc7fdf9f3da0116aafc06c23f597784eb0e3aad1840>,
+  recoveryParam: 1 }
+[36m[2018-03-30 09:55:48.930] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: f3ce62cf843851f66a485d48aa832776b51521a502174f2644cf1f9eaea9e7f7>,
+  s: <BN: 3ed5da7125e182db1774a8d3d62d4cbcf5af7e8929beb79877c9cbaa40f67831>,
+  recoveryParam: 1 }
+[36m[2018-03-30 09:55:49.221] [DEBUG] Join-Channel - [39mJoin Channel R E S P O N S E : [[{"version":0,"timestamp":null,"response":{"status":200,"message":"","payload":{"type":"Buffer","data":[]}},"payload":{"type":"Buffer","data":[]},"endorsement":null},{"version":0,"timestamp":null,"response":{"status":200,"message":"","payload":{"type":"Buffer","data":[]}},"payload":{"type":"Buffer","data":[]},"endorsement":null}],null,null]
+[32m[2018-03-30 09:55:49.223] [INFO] Join-Channel - [39mSuccessfully joined peers in organization org1 to the channel 'mychannel'
+[36m[2018-03-30 09:55:49.224] [DEBUG] Join-Channel - [39m
+============ Join Channel is SUCCESS ============
+
+[36m[2018-03-30 09:55:49.224] [DEBUG] Join-Channel - [39m
+[36m[2018-03-30 09:55:49.247] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: b96a985d696470c606ee71ab59a3f1f035ab92cce28190bff2825e08121668>,
+  s: <BN: 6eb04570cc95688263ebd3c37ad70260e8800da2f1f1ed725f7100cdde8de794>,
+  recoveryParam: 0 }
+[36m[2018-03-30 09:55:49.262] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: b96a985d696470c606ee71ab59a3f1f035ab92cce28190bff2825e08121668>,
+  s: <BN: 6eb04570cc95688263ebd3c37ad70260e8800da2f1f1ed725f7100cdde8de794>,
+  recoveryParam: 0 }
+[36m[2018-03-30 09:55:49.329] [DEBUG] SampleWebApp - [39m==================== INSTALL CHAINCODE ==================
+[36m[2018-03-30 09:55:49.330] [DEBUG] SampleWebApp - [39mpeers : localhost:7051,localhost:7056
+[36m[2018-03-30 09:55:49.330] [DEBUG] SampleWebApp - [39mchaincodeName : mycc
+[36m[2018-03-30 09:55:49.330] [DEBUG] SampleWebApp - [39mchaincodePath  : github.com/chaincode_example02
+[36m[2018-03-30 09:55:49.330] [DEBUG] SampleWebApp - [39mchaincodeVersion  : v0
+[36m[2018-03-30 09:55:49.330] [DEBUG] install-chaincode - [39m
+============ Install chaincode on organizations ============
+
+[36m[2018-03-30 09:55:49.330] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: constructor, keySize: 256
+[36m[2018-03-30 09:55:49.330] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256
+[36m[2018-03-30 09:55:49.334] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start
+[36m[2018-03-30 09:55:49.334] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js
+[36m[2018-03-30 09:55:49.334] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore.js - constructor
+[36m[2018-03-30 09:55:49.336] [DEBUG] Helper - [39mMsp ID : Org1MSP
+[36m[2018-03-30 09:55:49.339] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - start
+[36m[2018-03-30 09:55:49.342] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - have the key [Circular]
+[36m[2018-03-30 09:55:49.346] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/tmp/fabric-client-kvs_peerOrg1"}}
+[36m[2018-03-30 09:55:49.346] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore.js - constructor
+[36m[2018-03-30 09:55:49.349] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: _getKeyStore returning ks
+[36m[2018-03-30 09:55:49.349] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:49.349] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:49.351] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[36m[2018-03-30 09:55:49.354] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - start
+[36m[2018-03-30 09:55:49.356] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - have the key [Circular]
+[36m[2018-03-30 09:55:49.356] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: _getKeyStore resolving store
+[36m[2018-03-30 09:55:49.356] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:49.357] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:49.357] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[36m[2018-03-30 09:55:49.372] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:49.372] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:49.376] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:49.376] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:49.380] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:49.380] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:49.380] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[32minfo[39m: [packager/Golang.js]: packaging GOLANG from github.com/chaincode_example02
+[36m[2018-03-30 09:55:49.478] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: ded4c45da9337145c30fa7888c16c73b4fe71a731073ea53dc900bfe8d733451>,
+  s: <BN: 70914e5e106175c6067a930d32acde1a3a32a78640de6dde1e4193193b64d6f2>,
+  recoveryParam: 1 }
+[32m[2018-03-30 09:55:49.520] [INFO] install-chaincode - [39minstall proposal was good
+[32m[2018-03-30 09:55:49.522] [INFO] install-chaincode - [39minstall proposal was good
+[32m[2018-03-30 09:55:49.524] [INFO] install-chaincode - [39mSuccessfully sent install Proposal and received ProposalResponse: Status - 200
+[36m[2018-03-30 09:55:49.525] [DEBUG] install-chaincode - [39m
+Successfully Installed chaincode on organization org1
+
+[36m[2018-03-30 09:55:49.569] [DEBUG] SampleWebApp - [39m==================== INSTANTIATE CHAINCODE ==================
+[36m[2018-03-30 09:55:49.571] [DEBUG] SampleWebApp - [39mchannelName  : mychannel
+[36m[2018-03-30 09:55:49.574] [DEBUG] SampleWebApp - [39mchaincodeName : mycc
+[36m[2018-03-30 09:55:49.574] [DEBUG] SampleWebApp - [39mchaincodeVersion  : v0
+[36m[2018-03-30 09:55:49.574] [DEBUG] SampleWebApp - [39mfunctionName  : init
+[36m[2018-03-30 09:55:49.574] [DEBUG] SampleWebApp - [39margs  : a,100,b,200
+[36m[2018-03-30 09:55:49.579] [DEBUG] instantiate-chaincode - [39m
+============ Instantiate chaincode on organization org1 ============
+
+[36m[2018-03-30 09:55:49.580] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: constructor, keySize: 256
+[36m[2018-03-30 09:55:49.580] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256
+[36m[2018-03-30 09:55:49.580] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start
+[36m[2018-03-30 09:55:49.580] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js
+[36m[2018-03-30 09:55:49.585] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore.js - constructor
+[36m[2018-03-30 09:55:49.596] [DEBUG] Helper - [39mMsp ID : Org1MSP
+[36m[2018-03-30 09:55:49.598] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - start
+[36m[2018-03-30 09:55:49.599] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - have the key [Circular]
+[36m[2018-03-30 09:55:49.599] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: This class requires a CryptoKeyStore to save keys, using the store: {"opts":{"path":"/tmp/fabric-client-kvs_peerOrg1"}}
+[36m[2018-03-30 09:55:49.599] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore.js - constructor
+[36m[2018-03-30 09:55:49.621] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: _getKeyStore returning ks
+[36m[2018-03-30 09:55:49.621] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:49.621] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:49.623] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[36m[2018-03-30 09:55:49.626] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - start
+[36m[2018-03-30 09:55:49.633] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: importKey - have the key [Circular]
+[36m[2018-03-30 09:55:49.633] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: _getKeyStore resolving store
+[36m[2018-03-30 09:55:49.634] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:49.634] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:49.634] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[36m[2018-03-30 09:55:49.642] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:49.642] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:49.642] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:49.642] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:49.642] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param X: 0a66f3503a3322b2ca8e9dce03322d486ee6ec5970efaad3f153bc13aa2d942c
+[36m[2018-03-30 09:55:49.642] [DEBUG] Helper - [39m[ecdsa/key.js]: ECDSA curve param Y: 312ad05190fa592fb9e8ac2dcdb23c84df7f49e4ee295c2aa1200a50c9146c46
+[36m[2018-03-30 09:55:49.647] [DEBUG] Helper - [39m[FileKeyValueStore.js]: FileKeyValueStore -- setValue
+[36m[2018-03-30 09:55:49.660] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: 48c05864471e1ed68be097ba81d6a947255c99df3012bbefd3bd3b01221411b3>,
+  s: <BN: 1a5e0b81a15a686017541eda89cea455e523736e59180153f5486bc50a18a3dc>,
+  recoveryParam: 0 }
+[36m[2018-03-30 09:55:49.705] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: c807b85d4c055137ef64210ce3d60c3d47047ff02158605f929672f20ba78815>,
+  s: <BN: 667e9288bf54f25ae56f21b5158f1fc10cafe8b8ef7aa1f7fd8a44d83f3c70d3>,
+  recoveryParam: 1 }
+[36m[2018-03-30 09:55:49.766] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: constructor, keySize: 256
+[36m[2018-03-30 09:55:49.766] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256
+[36m[2018-03-30 09:55:49.768] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start
+[36m[2018-03-30 09:55:49.769] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js
+[36m[2018-03-30 09:55:49.773] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: constructor, keySize: 256
+[36m[2018-03-30 09:55:49.777] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256
+[36m[2018-03-30 09:55:49.779] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start
+[36m[2018-03-30 09:55:49.779] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js
+[36m[2018-03-30 09:55:49.781] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: constructor, keySize: 256
+[36m[2018-03-30 09:55:49.782] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256
+[36m[2018-03-30 09:55:49.783] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: CryptoKeyStore, constructor - start
+[36m[2018-03-30 09:55:49.783] [DEBUG] Helper - [39m[utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js
+[36m[2018-03-30 09:55:49.789] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: eef9653f11b8d34705db5acb36f5c1ac1221e1fc5be687e25ed756cef19c1cd2>,
+  s: <BN: 722a4c886c8c6334cf020fd0a3a19fcec4dc9b1025b148a4a12cf13deff8351b>,
+  recoveryParam: 1 }
+[32m[2018-03-30 09:56:54.475] [INFO] instantiate-chaincode - [39minstantiate proposal was good
+[32m[2018-03-30 09:56:54.477] [INFO] instantiate-chaincode - [39minstantiate proposal was good
+[32m[2018-03-30 09:56:54.479] [INFO] instantiate-chaincode - [39mSuccessfully sent Proposal and received ProposalResponse: Status - 200, message - "OK", metadata - "
+myccv0escc"vscc*< 	
+Org1MSP	
+Org2MSP
+
+OrdererMSP2D
+ ���(�Ul���(�u�z�av���S����Q *PI�w�jL5x6^�E=�)ˡF��	��C55: t���HԤ����~���6��s��(.v�"B,
+ 
+Org1MSP
+Org2MSP", endorsement signature: 0D #���J�9�&r�G:�N���k��NNp<)� @��������|m#I-�������6��`�+
+[32minfo[39m: [EventHub.js]: _connect - options {"grpc.ssl_target_name_override":"peer0.org1.example.com","grpc.default_authority":"peer0.org1.example.com"}
+[36m[2018-03-30 09:56:54.491] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: acc2a7a5a098e718ba30a5e006e6624a0c036a406265994489bd35747a106ce1>,
+  s: <BN: 5d5beaab276ad34e0437bfc7fdf9f3da0116aafc06c23f597784eb0e3aad1840>,
+  recoveryParam: 1 }
+[36m[2018-03-30 09:56:54.496] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: ceef4228d951ec12d591a816e62f14b821da38ada2e59c78769ddec89eb12189>,
+  s: <BN: 681108c0f6a53c292f66276ac2dd8a664ef4c11a7b321e611cc70808d85dd059>,
+  recoveryParam: 0 }
+[32m[2018-03-30 09:56:56.554] [INFO] instantiate-chaincode - [39mThe chaincode instantiate transaction has been committed on peer localhost:7053
+[36m[2018-03-30 09:56:56.565] [DEBUG] Helper - [39m[crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r: <BN: b96a985d696470c606ee71ab59a3f1f035ab92cce28190bff2825e08121668>,
+  s: <BN: 6eb04570cc95688263ebd3c37ad70260e8800da2f1f1ed725f7100cdde8de794>,
+  recoveryParam: 0 }
+[32m[2018-03-30 09:56:56.566] [INFO] instantiate-chaincode - [39mThe chaincode instantiate transaction was valid.
+[36m[2018-03-30 09:56:56.567] [DEBUG] instantiate-chaincode - [39mEvent promise all complete and testing complete
+[32m[2018-03-30 09:56:56.570] [INFO] instantiate-chaincode - [39mSuccessfully sent transaction to the orderer.
+runApp.sh: line 64:  8711 Terminated              PORT=4000 node app

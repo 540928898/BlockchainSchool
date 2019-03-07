@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="webthemez">
+    <title>学生端</title>
+	<!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet"> 
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet"> 
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico"> 
+    <style> * { box-sizing: border-box; } 
+    body { margin: 0; padding: 0; background: #fff; font-weight: 700; font-family: "Microsoft YaHei","宋体","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo; }
+     #container { width: 1020px; height:500px; margin: 0 auto; } 
+    div.search {padding: 30px 0;} form { position: relative; width: 900px; margin: 0 auto; } input, button { border: none; outline: none; } input { width: 100%; height: 62px; padding-left: 13px; } button { height: 62px; width: 42px; cursor: pointer; position: absolute; }
+     /*搜索框1*/ 
+     .bar1 input { border: 5px solid #9370DB; border-radius: 7px; background: #EEE685; color: #9E9C9C; } 
+     .bar1 button { top: 0; right: 0; background: #9370DB; border-radius: 0 5px 5px 0; } 
+     .bar1 button:before { content: "\f002"; font-family: FontAwesome; font-size: 16px; color: #F9F0DA; }
+</style>
+</head> 
+
+<body id="home">
+
+
+
+    <header id="header">
+        <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container" >
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                  <!--   <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a> -->
+                </div>
+				
+                <div class="collapse navbar-collapse navbar-left">
+                    <ul class="nav navbar-nav">
+                        <li class="scroll active"><a href="#home">主页</a></li> 
+						<li class="scroll"><a href="#features">获奖证书积分</a></li>
+                        <li class="scroll"><a href="#about">学生工作积分</a></li>      
+                        <li class="scroll"><a href="#about2">志愿活动积分申请</a></li>
+                        <li class="scroll"><a href="#about1">财富积分查询</a></li>   
+                         <li class="scroll"><a href="#features2">企业推荐个性化服务</a></li>      
+                         <li class="scroll"><a href="#features2">我的区块链校园档案</a></li>        
+                    </ul>
+                </div>
+
+               
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <section id="hero-banner">
+             <div class="banner-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                 
+                                    <h2><b>校园征信管理系统--</b>学生端</h2> 
+                                    <p>Welcome to BUCT--Student System!</p>
+                                   <!--   <button type="button" class="btn btn-default btn-block" onclick="register_fun()">开始旅程 |Register</button> -->
+                                    <a class="btn btn-primary btn-lg" href="login.html">Start Now</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section><!--/#main-slider-->
+     <section id="features">
+	 <div class="container">
+              <div align="text-center">
+                 <br>
+                 <h2 class="section-title wow fadeInDown">获奖证书积分</h2>
+               </div>
+                <br>
+                 <div class="form-group">
+                <label for="name">获奖类型</label>
+                <select class="form-control input-sm col-xs-4" >
+                  <option  name="zichan_type" value="学术竞赛" checked><strong> 学术竞赛</strong></span></option>
+                  <option  name="zichan_type" value="文体竞赛" ><strong> 文体竞赛</strong></span></option>
+                  <option  name="zichan_type" value="产能" ><strong> 校级评优</strong></span></option>
+                </select>
+              </div>
+              <br>
+	   <div class="tab-content">
+               
+                <form class="form-horizontal">
+                    <div class="form-group form-group-md">
+                    <label for="username" class="col-sm-2 control-label">姓名</label>
+                    <div class="col-md-2"> <input id="guige" type="text" class="form-control"></div>
+
+                    <label for="username" class="col-sm-2 control-label">学号</label>
+                    <div class="col-md-2"> <input id="caizhi" type="text" class="form-control"></div>
+
+                    <label for="username" class="col-sm-2 control-label">班级</label>
+                    <div class="col-md-2"><input id="jianshu" type="text" class="form-control"></div>
+
+
+                  </div>
+                  <br>
+
+                  <div class="form-group form-group-md">
+                    <label for="username" class="col-sm-2 control-label">奖项名称</label>
+                    <div class="col-md-2"><input id="cangdanId" type="text" class="form-control"></div>
+
+                     <label for="username" class="col-sm-2 control-label">获奖等级</label>
+                    <div class="col-md-2"> <input id="money" type="text" class="form-control"></div>
+
+              
+                    <label for="username" class="col-sm-2 control-label">获奖时间</label>
+                    <div class="col-md-2"> <input id="money" type="text" class="form-control"></div>
+
+                  </div>
+                  <br>
+
+
+                  <div class="col-md-offset-5 col-md-2">
+                    <a class="btn btn-primary btn-sm btn-block btn-lg" onclick="addReceipt()">获奖积分申请</a>
+                  </div>
+                </form>
+              </div>
+	 </div>
+	 </section>
+ 
+
+  
+ <section id="about">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title wow fadeInDown">学生工作积分</h2>
+                <p class="wow fadeInDown">学生工作的积分申请提交、审核.</p>
+            </div>
+
+             <div class="form-group">
+                <label for="name">工作级别</label>
+                <select class="form-control input-sm col-xs-4" >
+                  <option  name="zichan_type" value="文体竞赛" ><strong> 校级学生会</strong></span></option>
+                  <option  name="zichan_type" value="产能" ><strong> 院级学生会</strong></span></option>
+                </select>
+              </div>
+              <br>
+       <div class="tab-content">
+               
+                <form class="form-horizontal">
+                    <div class="form-group form-group-md">
+                    <label for="username" class="col-sm-2 control-label">姓名</label>
+                    <div class="col-md-2"> <input id="guige" type="text" class="form-control"></div>
+
+                    <label for="username" class="col-sm-2 control-label">学号</label>
+                    <div class="col-md-2"> <input id="caizhi" type="text" class="form-control"></div>
+
+                    <label for="username" class="col-sm-2 control-label">班级</label>
+                    <div class="col-md-2"><input id="jianshu" type="text" class="form-control"></div>
+
+
+                  </div>
+                  <br>
+
+                  <div class="form-group form-group-md">
+                    <label for="username" class="col-sm-2 control-label">工作部门</label>
+                    <div class="col-md-2"><input id="cangdanId" type="text" class="form-control"></div>
+
+                     <label for="username" class="col-sm-2 control-label">工作职称</label>
+                    <div class="col-md-2"> <input id="money" type="text" class="form-control"></div>
+
+              
+                    <label for="username" class="col-sm-2 control-label">起止时间</label>
+                    <div class="col-md-2"> <input id="money" type="text" class="form-control"></div>
+
+                  </div>
+                  <br>
+
+
+                  <div class="col-md-offset-5 col-md-2">
+                    <a class="btn btn-primary btn-sm btn-block btn-lg" onclick="addReceipt()">学生工作积分申请</a>
+                  </div>
+                </form>
+              </div>
+        </div>
+    </section><!--/#about-->
+ 
+ <section id="about2">
+        <div class="container">
+<br>
+<br>
+<br>
+<br>
+
+
+            <div class="section-header">
+                <h2 class="section-title wow fadeInDown">志愿活动积分</h2>
+                <p class="wow fadeInDown">学生志愿活动时间积分申请提交.</p>
+            </div>
+
+             <div class="form-group">
+                <label for="name">志愿范围</label>
+                <select class="form-control input-sm col-xs-4" >
+                  <option  name="zichan_type" value="文体竞赛" ><strong> 校内</strong></span></option>
+                  <option  name="zichan_type" value="产能" ><strong> 校外</strong></span></option>
+                </select>
+              </div>
+              <br>
+       <div class="tab-content">
+               
+                <form class="form-horizontal">
+                    <div class="form-group form-group-md">
+                    <label for="username" class="col-sm-2 control-label">姓名</label>
+                    <div class="col-md-2"> <input id="guige" type="text" class="form-control"></div>
+
+                    <label for="username" class="col-sm-2 control-label">学号</label>
+                    <div class="col-md-2"> <input id="caizhi" type="text" class="form-control"></div>
+
+                    <label for="username" class="col-sm-2 control-label">班级</label>
+                    <div class="col-md-2"><input id="jianshu" type="text" class="form-control"></div>
+
+
+                  </div>
+                  <br>
+
+                  <div class="form-group form-group-md">
+                    <label for="username" class="col-sm-2 control-label">志愿地点</label>
+                    <div class="col-md-2"><input id="cangdanId" type="text" class="form-control"></div>
+
+                     <label for="username" class="col-sm-2 control-label">志愿活动名称</label>
+                    <div class="col-md-2"> <input id="money" type="text" class="form-control"></div>
+
+              
+                    <label for="username" class="col-sm-2 control-label">志愿地点</label>
+                    <div class="col-md-2"> <input id="money" type="text" class="form-control"></div>
+
+                  </div>
+                  <br>
+
+
+                  <div class="col-md-offset-5 col-md-2">
+                    <a class="btn btn-primary btn-sm btn-block btn-lg" onclick="addReceipt()">志愿积分申请</a>
+                    <br>
+<br>
+<br>
+<br>
+<br>
+                  </div>
+                </form>
+              </div>
+        </div>
+    </section><!--/#about-->
+  
+ <section id="about1">
+        <div class="container" style="background:url(' https://assets.awwwards.com/awards/sites_of_the_day/2015/05/brdr-kruger-1.jpg" alt="" class="lazy lazy-loaded" data-src="https://assets.awwwards.com/awards/sites_of_the_day/2015/05/brdr-kruger-1.jpg') no-repeat; 
+           background-attachment: fixed;z-index:999;">
+           <div class="box"  style="background-color: #ffffff; filter:alpha(opacity=60);opacity:0.7;">
+        
+              <br>
+                <br>
+                  <br>
+                  <br>
+                <h2 class="section-title wow fadeInDown">财富积分查询</h2>
+                <p class="wow fadeInDown"><font color="white">查询您的财富积分，当积分达到一定额度可用于线下奖品兑换.</font></p>
+          
+<div id="container"> 
+  <div class="search bar1"> 
+  <form>
+   <input type="text" placeholder="请输入您的学号查询数字积分...">
+    <button type='button' class="btn btn-success"  onclick = "QueryPoint()"></button> 
+  </form> 
+ <div class="col-md-4 col-md-offset-4" >
+  <br>
+  <!-- <textarea id="searchResult">-->
+<textarea class="form-control" rows="1" id="searchResult"></textarea>
+
+  </div>
+
+    </div>
+     </div>
+
+
+           
+        </div>
+    </section><!--/#about-->
+ <section id="about">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title wow fadeInDown">学生企业推荐服务</h2>
+                <p class="wow fadeInDown">为学生推荐适合自己技能发展的企业实习、工作推荐等个性化服务.</p>
+            </div>
+
+             <div class="form-group">
+                <label for="name">期望公司类别</label>
+                <select class="form-control input-sm col-xs-4" >
+                  <option  name="zichan_type" value="文体竞赛" ><strong> 互联网行业</strong></span></option>
+                  <option  name="zichan_type" value="文体竞赛" ><strong> 金融领域</strong></span></option>
+                   <option  name="zichan_type" value="产能" ><strong> 石化行业</strong></span></option>
+                  <option  name="zichan_type" value="产能" ><strong> 设计行业</strong></span></option>
+                </select>
+              </div>
+              <br>
+       <div class="tab-content">
+               
+                <form class="form-horizontal">
+                    <div class="form-group form-group-md">
+                    <label for="username" class="col-sm-2 control-label">预期应聘职位</label>
+                    <div class="col-md-2"> <input id="guige" type="text" class="form-control"></div>
+
+                    <label for="username" class="col-sm-4 control-label">预期薪资</label>
+                    <div class="col-md-2"> <input id="caizhi" type="text" class="form-control"></div>
+<br>
+<br>
+<br>
+                
+
+
+                  <div class="col-md-offset-5 col-md-2">
+                    <a class="btn btn-primary btn-sm btn-block btn-lg" onclick="addReceipt()">提交预期工作需求</a>
+                  </div>
+                </form>
+              </div>
+        </div>
+    </section><!--/#about-->
+ <section id="features2">
+   <div class="container">
+              <div align="text-center">
+                 <br>
+                 <h2 class="section-title wow fadeInDown" text-align: center
+    >我的区块链档案</h2>
+               </div>
+                <br>              
+                </p>
+             
+                  <div class="col-md-offset-5 col-md-2">
+               <!-- <a href="dangan.html" class="button button-3d button-primary button-rounded">生成我的区块链校园档案</a> -->
+                    <a class="btn btn-primary btn-sm btn-block btn-lg"   style="width:250px;height:40px;" onclick="addProfile()"><strong>生成我的区块链校园档案</strong></a>
+                    <br>
+                    <br>
+                     <br>
+                    <br>
+                  </div>
+                </form>
+              </div>
+   </div>
+   </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">Copyright &copy; 2018. All rights reserved. <a target="_blank">苏州同济区块链研究院</a> </div>
+                <div class="col-sm-6">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/mousescroll.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom-scripts.js"></script>
+ <script >
+ function  QueryPoint(){
+ //var cname = getCookie("cname");
+    //$("#cname").html(cname);
+
+    var postBody = {
+       args:"2014014080"
+    };
+    console.log(postBody);
+    $.ajax({
+      type: 'POST',
+      header:{
+        'content-type':'application/json'
+
+      },
+      url: 'http://localhost:8080/query/student',
+      data: postBody,
+      dataType: 'json',
+      success: function (data) {
+        
+            
+         console.log(typeof data);
+        
+          $("#searchResult").append(data.QueryStudentResult);
+          console.log(data.QueryStudentResult);
+    
+      }
+    });
+  }
+
+
+
+  function  addProfile(){
+    window.location.href = "dangan.html"
+  }
+ </script>
+</body>
+</html>

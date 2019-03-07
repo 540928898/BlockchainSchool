@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>学员-苏州同济金融科技研究院区块链培训信息记录</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free HTML5 Template by FREEHTML5" />
+  <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+  
+    <!-- Facebook and Twitter integration -->
+  <meta property="og:title" content=""/>
+  <meta property="og:image" content=""/>
+  <meta property="og:url" content=""/>
+  <meta property="og:site_name" content=""/>
+  <meta property="og:description" content=""/>
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="/css/animate.css">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="/css/icomoon.css">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <!-- Superfish -->
+  <link rel="stylesheet" href="/css/superfish.css">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- FOR IE9 below -->
+  <!--[if lt IE 9]>
+  <script src="/js/respond.min.js"></script>
+  <![endif]-->
+  <!-- jQuery -->
+
+
+
+  </head>
+  <body>
+      <div class="modal fade" tabindex="-1" role="dialog" id="myModel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">修改信息</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal" id="addlearnerBlock">
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">姓名</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="amname">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">手机号</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="amphoneNumber" maxlength="11" readonly>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">邮箱</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="ammailbox" onBlur="checkmail(this);">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">所在机构</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="aminstitution">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">职位/职业</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="amposition">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-info"  onclick="Amend2();">修改</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div id="fh5co-wrapper">
+    <div id="fh5co-page">
+    <div id="fh5co-header">
+      <header id="fh5co-header-section" class="head-overlay">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a><h4 id="fh5co-logo"><a href="/index.html">区块链课程培训信息记录<span class="glyphicon glyphicon-education"></span></a></h4>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <li>
+                  <a href="index.html">主页</i></a>
+                </li>
+                <li><a href="http://www.tj-fintech.com/">关于我们</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>     
+    </div>  
+    <!-- fh5co-content-section开始看 -->
+    <div id="fh5co-services-section">
+      <div class="user-header"></div>
+      <div class="container" id="checkMRec">
+        <div class="row">
+         <div class="col-md-8 col-md-offset-2 heading-section animate-box">
+          <div class="text-center" id="myinfoBlock"></div>
+	  <div id="mychaininfoBlock" style="display: block;">
+            <div class="text-center"><b>区块链培训合格证书</b></div>
+	    <br>
+            <div style="text-indent:2em"><span id="showname"></span>(女士/先生)参加于<span id="trainTime"></span>由苏州同济金融科技研究院主办的<span id="term"></span>区块链人才培训。并通过基本考核，特发此证。</div>
+	    <br>
+            <div class="pull-left"><b>证书编号：<span id="qualificationId"></span></b></div><br>
+	    <br>
+            <div class="pull-right">苏州同济金融科技研究院</div><br>
+            <div class="pull-right" id="authenTime"></div>
+	    </b></b>
+	   </div>
+          <div class="text-center" id="wholechaininfoBlock"><a class="btn btn-info" href="http://vpn.tj-fintech.com:57090/">在区块链浏览器中查看</a>
+	  <hr>	   
+            <div id="method">
+             查看方法(建议在平板或笔记本电脑等大屏幕设备上查看)：<br>
+            <b> 方法1</b><br>
+             ·复制证书编号到"区块浏览"框<br>
+             ·选择"Transaction"并点击查找<br>
+             <img src="/images/search.jpg" width="360" alt="图片资源暂时失踪"><br>
+             ·在”Transation“框中查找<br>
+             <img src="/images/show.jpg" width="360" alt="图片资源暂时失踪"><br>
+	     ·展开详细内容<br>
+	     <img src="/images/detail.jpg" width="360" alt="图片资源暂时失踪"><br>
+            <b> 方法2：</b><br>
+	    <br>
+             ·在BLOCKLIST中查找，学员记录所在的Bock与学员编号相近<br>
+             ·点击"BLOCK#*"框的”Transactions字段“后在"Transaction"框中并查看<br>
+            </div>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+    <!-- END fh5co-services-section -->   
+    <!-- fh5co-blog-section -->
+    <footer>
+      <div id="footer" style="background: #017f98;">
+        <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center">
+        <p><a href="http://www.tj-fintech.com/">Copyright ©www.tj-fintech.com苏州同济金融科技研究院</a></p>
+        </div>
+      </div>
+    </div>
+      </div>
+    </footer>  
+    </div>
+  <!-- END fh5co-page -->
+
+    </div>
+  <!-- END fh5co-wrapper -->
+
+  <script src="/js/jquery.min.js"></script>
+  <!-- jQuery Easing -->
+  <script src="/js/jquery.easing.1.3.js"></script>
+  <!-- Bootstrap -->
+  <script src="/js/bootstrap.min.js"></script>
+  <!-- Waypoints -->
+  <script src="/js/jquery.waypoints.min.js"></script>
+  <!-- Stellar -->
+  <script src="/js/jquery.stellar.min.js"></script>
+  <!-- Superfish -->
+  <script src="/js/hoverIntent.js"></script>
+  <script src="/js/superfish.js"></script>
+
+  <!-- Main JS -->
+  <script src="/js/main.js"></script>
+    <!-- Modernizr JS -->
+  <script src="/js/modernizr-2.6.2.min.js"></script>            
+  <script type="text/javascript">
+          $(document).ready(function(){
+              $(".user-header").load("./user-header.html");
+              $("#mychaininfoBlock").hide();
+              $("#wholechaininfoBlock").hide();
+          });
+    function getCookie(objName){//获取指定名称的cookie的值   
+        var arrStr = document.cookie.split("; ");   
+        for (var i = 0; i < arrStr.length; i++) {   
+            var temp = arrStr[i].split("=");   
+            if (temp[0] == objName)   
+                return unescape(temp[1]);   
+        }   
+    }   
+      var lname = getCookie("lname"); 
+      $("#lname").html(lname);
+    var password =getCookie("password");
+    var postBody = {
+        username:lname,
+        phone: getCookie("phone"),
+        password: password
+    };
+    console.log(postBody.username + " " + postBody.password);
+    $.ajax({
+        type: 'POST',
+        url: '/users/login',
+        data: postBody,
+        dataType: 'json',
+        success: function(data){
+          console.log(JSON.stringify(data));
+          function addCookie(objName, objValue, objHours){//添加cookie   
+              var str = objName + "=" + escape(objValue);   
+              if (objHours > 0) {//为0时不设定过期时间，浏览器关闭时cookie自动消失   
+                  var date = new Date();   
+                  var ms = objHours * 3600 * 1000;   
+                  date.setTime(date.getTime() + ms);   
+                  str += "; expires=" + date.toGMTString();   
+              }   
+              document.cookie = str;
+          }  
+          $("#lname").html(data.data[0].name);
+              for(var i=0;i<data.data.length;i++){
+                $('<br>期数：<span id="term">'+ data.data[i].term+'</span><br>学员编号:<span id="bianhao'+i+'">'+data.data[i].bianhao+'</span><br>姓名：<span id="name'+i+'">'+data.data[i].name+'</span><br>手机号码：<span id="phone'+i+'">'+data.data[i].phone+'</span></br>邮箱：<span id="mailbox'+i+'">'+data.data[i].mailbox+'</span><br>所在机构：<span id="institution'+i+'">'+
+                data.data[i].institution+'</span></br>职业/职位：<span id="position'+i+'">'+data.data[i].position+'</span><br><span id="position'+i+'"><b>区块链标记码：</b><span><b>'+data.data[i].txid+'</b></span></br><a class="btn btn-info btn-xs"  data-toggle="modal" data-target="#myModel" id="amend'+i+'" onclick="amend('+i+');">修改信息</a><br></hr>').appendTo("#myinfoBlock");
+                addCookie("content","a"+i,24);
+              }
+              if($("#myinfoBlock").text()==""){
+                $("#myinfoBlock").html("暂无记录");
+              }
+	     $("#showname").html(data.data[0].name);
+	     $("#term").html(data.data[0].term);
+             $("#qualificationId").html(data.data[0].txid);
+             $("#trainTime").html(data.data[0].trainTime);
+             $("#authenTime").html(data.data[0].authenTime);
+            }
+    }).error(function(err){
+        console.log(err);
+        alert("错误："+err.responseText);
+    });
+    function login_out(){
+      delCookie(getCookie("name"));
+      setTimeout("window.location.href='login.html'",1000);
+    }
+    function delCookie(name){//为了删除指定名称的cookie，可以将其过期时间设定为一个过去的时间   
+      var date = new Date();   
+      date.setTime(date.getTime() - 10000);   
+      document.cookie = name + "=a; expires=" + date.toGMTString();   
+    } 
+    function amend(number){
+      var name;
+      var mailbox;
+      var institution;
+      var position;
+      name = $("#name"+number).html();
+      phone = $("#phone"+number).html()
+      mailbox = $("#mailbox"+number).html();
+      institution = $("#institution"+number).html();
+      position = $("#position"+number).html();
+      $("#amname").val(name);
+      $("#amphoneNumber").val(phone);
+      $("#ammailbox").val(mailbox);
+      $("#aminstitution").val(institution);
+      $("#amposition").val(position);
+      
+    }
+    function Amend2(){    
+      postBody = {
+          name: $("#amname").val(),
+          phone: $("#amphoneNumber").val(),
+          mailbox: $("#ammailbox").val(),
+          institution: $("#aminstitution").val(),
+          position: $("#amposition").val()
+      }
+        $.ajax({
+          type: 'POST',
+          url: '/check/learner/update',
+          data: postBody,
+          dataType: 'json',
+          success: function(data){
+            alert(JSON.stringify(data));
+              }
+      }).error(function(err){
+          console.log(err);
+          alert("错误："+err.responseText);
+      });
+
+    }
+            </script>
+  </body>
+</html>
+
